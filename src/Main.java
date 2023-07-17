@@ -9,6 +9,7 @@ public class Main {
         task4(35); // укажите аргумент (возраст человека)
         task5();
         task6();
+        task7(5, -100, 0); // укажите 3 числа. Найдем самое большое
     }
 
     static void task1() {
@@ -103,6 +104,18 @@ public class Main {
             System.out.println("В вагоне есть стоячие места");
         } else {
             System.out.println("В вагоне нет мест");
+        }
+    }
+
+    static void task7(int one, int two, int three) {
+        System.out.println("\nЗадание №7:");
+
+        if (one > two && one > three) {
+            System.out.println("Максимальное число - " + one);
+        } else if (two > one && two > three) {
+            System.out.println("Максимальное число - " + two);
+        } else {
+            System.out.println("Максимальное число - " + three);
         }
     }
 }
