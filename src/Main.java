@@ -1,10 +1,14 @@
 import java.util.Scanner;
 
 public class Main {
+    static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         task1();
         task2();
+
+        sc.close();
+
         task3(90); // укажите аргумент (скорость автомобиля)
         task4(35); // укажите аргумент (возраст человека)
         task5();
@@ -16,10 +20,7 @@ public class Main {
         System.out.println("Задание №1:");
         System.out.println("Введите возраст человека");
 
-        Scanner sc = new Scanner(System.in);
-
         int age = sc.nextInt();
-        sc.close();
 
         if (age < 0) {
             System.out.println("Этот человек еще не родился");
@@ -34,12 +35,9 @@ public class Main {
 
     static void task2() {
         System.out.println("\nЗадание №2:");
-        System.out.println("Какая темпиратура на улице?");
-
-        Scanner sc = new Scanner(System.in);
+        System.out.println("Какая температура на улице?");
 
         int temperature = sc.nextInt();
-        sc.close();
 
         if (temperature <= 5) {
             System.out.println("На улице холодно, нужно одеть шапку");
