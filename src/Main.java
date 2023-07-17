@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
+        task3(90); // укажите аргумент
     }
 
     static void task1() {
@@ -40,6 +41,16 @@ public class Main {
             System.out.println("На улице холодно, нужно одеть шапку");
         } else {
             System.out.println("Сегодня тепло, можно идти без шапки");
+        }
+    }
+
+    static void task3(int speed) {
+        System.out.println("Задание №3:");
+
+        if (speed > 60) {
+            System.out.println("Если скорость " + speed + "км/ч , то придеться заплатить штраф");
+        } else if (speed > 0 && speed <=60){
+            System.out.println("Если скорость " + speed + "км/ч , то можно ездить спокойно");
         }
     }
 }
