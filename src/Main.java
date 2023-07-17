@@ -7,6 +7,7 @@ public class Main {
         task2();
         task3(90); // укажите аргумент (скорость автомобиля)
         task4(35); // укажите аргумент (возраст человека)
+        task5();
     }
 
     static void task1() {
@@ -30,7 +31,7 @@ public class Main {
     }
 
     static void task2() {
-        System.out.println("Задание №2:");
+        System.out.println("\nЗадание №2:");
         System.out.println("Какая темпиратура на улице?");
 
         Scanner sc = new Scanner(System.in);
@@ -46,7 +47,7 @@ public class Main {
     }
 
     static void task3(int speed) {
-        System.out.println("Задание №3:");
+        System.out.println("\nЗадание №3:");
 
         if (speed > 60) {
             System.out.println("Если скорость " + speed + "км/ч , то придеться заплатить штраф");
@@ -56,7 +57,7 @@ public class Main {
     }
 
     static void task4(int age) {
-        System.out.println("Задание №4:");
+        System.out.println("\nЗадание №4:");
 
         if (age >= 2 && age <= 6) {
             System.out.println("Если возраст человека равен " + age + ", то ему нужно ходить в детский сад");
@@ -68,6 +69,22 @@ public class Main {
             System.out.println("Если возраст человека равен " + age + ", то ему пора ходить на работу");
         } else {
             System.out.println("Этот человек не родился или еще слишком юн");
+        }
+    }
+
+    static void task5(){
+        System.out.println("\nЗадание №5:");
+
+        int age = 8;
+
+        if (age<5){
+            System.out.println("Если возраст ребенка " + age + "лет, то он не может кататься на аттракционе");
+        } else if (age>=5 && age<14){
+            System.out.println("Если возраст ребенка " + age + "лет, то он может кататься на аттракционе, " +
+                    " только в сопровождении взрослого");
+        } else {
+            System.out.println("Если возраст ребенка " + age + "лет, то он может кататься на аттракционе " +
+                    " без сопровождения взрослого");
         }
     }
 }
