@@ -8,6 +8,7 @@ public class Main {
         task3(90); // укажите аргумент (скорость автомобиля)
         task4(35); // укажите аргумент (возраст человека)
         task5();
+        task6();
     }
 
     static void task1() {
@@ -72,19 +73,36 @@ public class Main {
         }
     }
 
-    static void task5(){
+    static void task5() {
         System.out.println("\nЗадание №5:");
 
         int age = 8;
 
-        if (age<5){
+        if (age < 5) {
             System.out.println("Если возраст ребенка " + age + "лет, то он не может кататься на аттракционе");
-        } else if (age>=5 && age<14){
+        } else if (age >= 5 && age < 14) {
             System.out.println("Если возраст ребенка " + age + "лет, то он может кататься на аттракционе, " +
                     " только в сопровождении взрослого");
         } else {
             System.out.println("Если возраст ребенка " + age + "лет, то он может кататься на аттракционе " +
                     " без сопровождения взрослого");
+        }
+    }
+
+    static void task6() {
+        System.out.println("\nЗадание №6:");
+        int wagonCap = 102;
+        int seatPlaces = 60;
+        int standPlaces = wagonCap - seatPlaces;
+
+        if (wagonCap <= 102 && (seatPlaces <= 60 || standPlaces <= (wagonCap - seatPlaces))) {
+            System.out.println("Места в вагоне есть");
+        } else if (wagonCap <= 102 && (seatPlaces <= 60)) {
+            System.out.println("В вагоне есть сидячие места");
+        } else if (wagonCap <= 102 && (standPlaces <= (wagonCap - seatPlaces))) {
+            System.out.println("В вагоне есть стоячие места");
+        } else {
+            System.out.println("В вагоне нет мест");
         }
     }
 }
