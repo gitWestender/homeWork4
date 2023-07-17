@@ -5,7 +5,8 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
-        task3(90); // укажите аргумент
+        task3(90); // укажите аргумент (скорость автомобиля)
+        task4(35); // укажите аргумент (возраст человека)
     }
 
     static void task1() {
@@ -49,8 +50,24 @@ public class Main {
 
         if (speed > 60) {
             System.out.println("Если скорость " + speed + "км/ч , то придеться заплатить штраф");
-        } else if (speed > 0 && speed <=60){
+        } else if (speed > 0 && speed <= 60) {
             System.out.println("Если скорость " + speed + "км/ч , то можно ездить спокойно");
+        }
+    }
+
+    static void task4(int age) {
+        System.out.println("Задание №4:");
+
+        if (age >= 2 && age <= 6) {
+            System.out.println("Если возраст человека равен " + age + ", то ему нужно ходить в детский сад");
+        } else if (age > 6 && age < 18) {
+            System.out.println("Если возраст человека равен " + age + ", то ему нужно ходить в школу");
+        } else if (age >= 18 && age < 24) {
+            System.out.println("Если возраст человека равен " + age + ", то ему нужно ходить в университет");
+        } else if (age >= 24) {
+            System.out.println("Если возраст человека равен " + age + ", то ему пора ходить на работу");
+        } else {
+            System.out.println("Этот человек не родился или еще слишком юн");
         }
     }
 }
